@@ -14,4 +14,9 @@
         const wrapper = shallow(<Objective objective={objective} />)
         expect(wrapper.find('h1').text()).toEqual('First objective')
      });
+
+     it('displays the score', () => {
+         const wrapper = shallow(<Objective objective={objective} />)
+         expect(wrapper.find('h2 span').text()).toEqual("0.1")
+        })
  })
